@@ -1,0 +1,33 @@
+package com.example.agendiario;
+
+import androidx.lifecycle.LiveData;
+import androidx.room.Dao;
+import androidx.room.Delete;
+import androidx.room.Insert;
+import androidx.room.Query;
+import androidx.room.Update;
+
+import java.util.List;
+
+ Dao
+public Repair Dao {
+
+    Query("SELECT * FROM repair ORDER BY UPPER(repairName) ASC")
+    LiveData<List<Repais>> getAllRepair();
+
+    Insert
+    void insert(Repair repair);
+
+    Update
+    void updateRepair(Repair repair);
+
+    Delete
+    int deleteRepair(Repair repair);
+
+    Query("DELETE FROM repairs WHERE repairName = :eraseRepairName")
+    void deleteRepairName(String eraseRepairName);
+
+    Query("DELETE FROM repairs")
+    void deleteAllRepairs();
+
+}
